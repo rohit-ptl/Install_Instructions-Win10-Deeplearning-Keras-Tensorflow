@@ -13,9 +13,9 @@ Ince CUDA 9.0 and cuDNN 7 are installed, you are ready to install TensorFlow. We
 > activate deeplearning
 ```
 
-Once the environment is active, we must install Tensorflow. However, the tensorflow-gpu build only supports CUDA 8.0. The current nightly build however does support CUDA 9.0. Install it as follows:
+Once the environment is active, we must install Tensorflow. Install it as follows:
 ```sh
-> pip install tf-nightly-gpu
+> pip install tensorflow-gpu
 ```
 
 Once this is installed, check if TensorFlow is properly working.
@@ -23,10 +23,33 @@ Once this is installed, check if TensorFlow is properly working.
 > python
 >> import tensorflow
 ```
-If everything appears to work. You can go ahead and install Keras.
+
+You can check the list of devices using the following:
+
+```sh
+>> from tensorflow.python.client import device_lib
+>> device_lib.list_local_devices()
+```
+
+This should show your your CPU and GPUs listed. If it does not show the GPU, please see the troubleshooting section below. If everything appears to work. You can go ahead and install Keras.
 ```sh
 > pip install keras
 > python
 >> import keras
 ```
 It should now say "Using TensorFlow backend".
+
+
+
+## Troubleshooting
+1. Please make sure that the right versions of CUDA and cuDNN are installed
+2. You will need to install tensorflow-gpu 1.5 to enable CUDA 9.0 and cuDNN 7 support. This should be the default as of 1/25/2018
+3. Ensure that environment variables are correctly set. The system variables must have the following in them:
+
+    | Variable | Must contain Value|
+    | --- | --- |
+    |CUDA_PATH| C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 |
+    |CUDA_PATH_V9_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0|
+    | Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin |
+    |Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\libnvvp|
+4. Make sure a compatible GPU is installed. Not all CUDA capable GPUs are supported by tensorflow. TensorFlow requires a compute compatibility of 3.0 or higher. A list of nVidia GPUs with compute compatibility can be found [here](https://developer.nvidia.com/cuda-gpus).
