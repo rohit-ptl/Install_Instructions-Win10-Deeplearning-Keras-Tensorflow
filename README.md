@@ -6,7 +6,7 @@ Next, download "cuDNN v7.0.5 (Dec 5, 2017), for CUDA 9.0" from [here](https://de
 
 Follow the instructions for cuDNN installation [here](http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#installwindows).
 
-Ince CUDA 9.0 and cuDNN 7 are installed, you are ready to install TensorFlow. We assume that you have anaconda installed with a current environment for use (let us call the current environment "aind"). We will first create a clone of the environment (call it "deeplearning") and activate it. Note3: Windows powershell does not work with the activate command. You must open a regular command prompt
+Once CUDA 9.0 and cuDNN 7 are installed, you are ready to install TensorFlow. We assume that you have anaconda installed with a current environment for use (let us call the current environment "aind"). We will first create a clone of the environment (call it "deeplearning") and activate it. Note3: Windows powershell does not work with the activate command. You must open a regular command prompt
 
 ```sh
 > conda create --name deeplearning --clone aind
@@ -52,4 +52,4 @@ It should now say "Using TensorFlow backend".
     |CUDA_PATH_V9_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0|
     | Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin |
     |Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\libnvvp|
-4. Make sure a compatible GPU is installed. Not all CUDA capable GPUs are supported by tensorflow. TensorFlow requires a compute compatibility of 3.0 or higher. A list of nVidia GPUs with compute compatibility can be found [here](https://developer.nvidia.com/cuda-gpus).
+4. Make sure a compatible GPU is installed. Not all CUDA capable GPUs are supported by tensorflow. TensorFlow requires a compute compatibility of 3.0 or higher. A list of nVidia GPUs with compute compatibility can be found [here](https://developer.nvidia.com/cuda-gpus/).
