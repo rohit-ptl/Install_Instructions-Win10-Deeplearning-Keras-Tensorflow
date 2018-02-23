@@ -43,7 +43,7 @@ It should now say "Using TensorFlow backend".
 
 ## Troubleshooting
 1. Please make sure that the right versions of CUDA and cuDNN are installed
-2. You will need to install tensorflow-gpu 1.5 to enable CUDA 9.0 and cuDNN 7 support. This should be the default as of 1/25/2018
+2. You will need to install tensorflow-gpu 1.5 to enable CUDA 9.0 and cuDNN 7 support. This should be the default as of 2/22/2018
 3. Ensure that environment variables are correctly set. The system variables must have the following in them:
 
     | Variable | Must contain Value|
