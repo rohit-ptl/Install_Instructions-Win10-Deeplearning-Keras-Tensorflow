@@ -1,5 +1,7 @@
 # Install instructions for TensorFlow and Keras using CUDA 9 and cuDNN 7 with GPU enabled, on Windows 10
 
+Latest update date: 2/22/2018
+
 First, download and install CUDA 9.0 from the [archives](https://developer.nvidia.com/cuda-toolkit-archive). Note that 9.1 is the lastest version as of 1/14/2018, but did not work with tensorflow for me.
 
 Next, download "cuDNN v7.0.5 (Dec 5, 2017), for CUDA 9.0" from [here](https://developer.nvidia.com/rdp/cudnn-download).   Note1: Please make sure to download the version that says "for CUDA 9.0".   Note2: You will be required to make a NVIDIA Developers account for download.
