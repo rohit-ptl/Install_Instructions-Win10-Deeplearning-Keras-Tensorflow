@@ -1,6 +1,6 @@
 # Install instructions for TensorFlow and Keras using CUDA 9 and cuDNN 7 with GPU enabled, on Windows 10
 
-Latest update date: 03/07/2018
+Latest update date: 03/09/2018
 
 First, download and install CUDA 9.0 from the [archives](https://developer.nvidia.com/cuda-toolkit-archive). Note that 9.1 is the lastest version as of 1/14/2018, but did not work with tensorflow for me.
 
@@ -15,7 +15,7 @@ Once CUDA 9.0 and cuDNN 7 are installed, you are ready to install TensorFlow. We
 > activate deeplearning
 ```
 
-Once the environment is active, we must install Tensorflow. Install it as follows:
+Once the environment is active, we must install Tensorflow. Please read toubleshooting step 6 below if you have an older processor. Install it as follows:
 ```sh
 > pip install tensorflow-gpu==1.6
 ```
@@ -45,7 +45,7 @@ It should now say "Using TensorFlow backend".
 
 ## Troubleshooting
 1. Please make sure that the right versions of CUDA and cuDNN are installed
-2. You will need to install tensorflow-gpu 1.5 to enable CUDA 9.0 and cuDNN 7 support. This should be the default as of 2/22/2018
+2. You will need to install tensorflow-gpu 1.5 or 1.6 to enable CUDA 9.0 and cuDNN 7 support. Prior versions don't support this.
 3. Ensure that environment variables are correctly set. The system variables must have the following in them:
 
     | Variable | Must contain Value|
@@ -55,3 +55,4 @@ It should now say "Using TensorFlow backend".
     | Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin |
     |Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\libnvvp|
 4. Make sure a compatible GPU is installed. Not all CUDA capable GPUs are supported by tensorflow. TensorFlow requires a compute compatibility of 3.0 or higher. A list of nVidia GPUs with compute compatibility can be found [here](https://developer.nvidia.com/cuda-gpus/).
+5. If you are using tensorflow-gpu 1.6, make sure your CPU supports AVX (a list of CPUs can be found [here](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions)). If your CPU does not support AVX, use tensorflow-gpu==1.5 in the tensorflow installation line above and it should solve the issue.
