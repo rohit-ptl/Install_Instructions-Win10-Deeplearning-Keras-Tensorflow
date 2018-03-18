@@ -1,6 +1,6 @@
 # Install instructions for TensorFlow and Keras using CUDA 9 and cuDNN 7 with GPU enabled, on Windows 10
 
-Latest update date: 03/09/2018
+Latest update date: 03/18/2018
 
 **Step 1:** First, let's make sure the system satisfies the hardware requirements, and let's pick the right version of tensorflow based on your hardware:
 
