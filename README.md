@@ -1,11 +1,11 @@
 # Install instructions for TensorFlow and Keras using CUDA 9 and cuDNN 7 with GPU enabled, on Windows 10
 
-Latest update date: 03/18/2018
+Latest update date: 05/05/2018
 
 **Step 1:** First, let's make sure the system satisfies the hardware requirements, and let's pick the right version of tensorflow based on your hardware:
 
 1. Make sure a compatible GPU is installed. Not all CUDA capable GPUs are supported by tensorflow. TensorFlow requires a compute compatibility of 3.0 or higher. A list of nVidia GPUs with compute compatibility can be found [here](https://developer.nvidia.com/cuda-gpus/).
-2. Check if your CPU is AVX compatible (a list of CPUs can be found [here](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions)). If your CPU does not support AVX, you will need to install tensorflow 1.5 instead of tensorflow 1.6. Use tensorflow-gpu==1.5 in the tensorflow installation line in Step 4 below and that should be it.
+2. Check if your CPU is AVX compatible (a list of CPUs can be found [here](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions)). If your CPU does not support AVX, you will need to install tensorflow 1.5 instead of tensorflow 1.8. Use tensorflow-gpu==1.5 in the tensorflow installation line in Step 4 below and that should be it.
 
 
 **Step 2:** Next, download and install CUDA 9.0 from the [archives](https://developer.nvidia.com/cuda-toolkit-archive). Note that 9.1 or later versions are NOT compatible with the current versions of tensorflow. I will update this as and when they become compatible.
@@ -27,7 +27,7 @@ Once the environment is active, we must install Tensorflow.
 
 **Step 4:** Install tensorflow-gpu as follows:
 ```sh
-> pip install tensorflow-gpu==1.6
+> pip install tensorflow-gpu==1.8
 ```
 
 Once this is installed, check if TensorFlow is properly working.
@@ -53,7 +53,7 @@ It should now say "Using TensorFlow backend".
 
 ## Troubleshooting
 1. Please make sure that the right versions of CUDA and cuDNN are installed
-2. You will need to install tensorflow-gpu 1.5 or 1.6 to enable CUDA 9.0 and cuDNN 7 support. Prior versions don't support this.
+2. You will need to install tensorflow-gpu 1.5 or above to enable CUDA 9.0 and cuDNN 7 support. Prior versions don't support this.
 3. Ensure that environment variables are correctly set. The system variables must have the following in them:
 
     | Variable | Must contain Value|
@@ -63,4 +63,4 @@ It should now say "Using TensorFlow backend".
     | Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin |
     |Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\libnvvp|
 4. Make sure a compatible GPU is installed. Not all CUDA capable GPUs are supported by tensorflow. TensorFlow requires a compute compatibility of 3.0 or higher. A list of nVidia GPUs with compute compatibility can be found [here](https://developer.nvidia.com/cuda-gpus/).
-5. If you are using tensorflow-gpu 1.6, make sure your CPU supports AVX (a list of CPUs can be found [here](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions)). If your CPU does not support AVX, use tensorflow-gpu==1.5 in the tensorflow installation line above and it should solve the issue.
+5. If you are using tensorflow-gpu 1.6 or above, make sure your CPU supports AVX (a list of CPUs can be found [here](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions)). If your CPU does not support AVX, use tensorflow-gpu==1.5 in the tensorflow installation line above and it should solve the issue.
