@@ -14,7 +14,7 @@ Also download "cuDNN v7.2.1 (August 7, 2018), for CUDA 9.2" from [here](https://
 
 Follow the instructions for cuDNN installation [here](http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#installwindows).
 
-Once CUDA 9.0 and cuDNN 7 are installed, you are ready to install TensorFlow. If you use conda, I suggest cloning the environment. You can skip Step 3 if you do not use conda.
+Once CUDA 9.2 and cuDNN 7.2 are installed, you are ready to install TensorFlow. If you use conda, I suggest cloning the environment. You can skip Step 3 if you do not use conda.
 
 **Step 3:**  We assume that you have anaconda installed with a current environment for use (let us call the current environment "aind"). We will first create a clone of the environment (call it "deeplearning") and activate it. Note3: Windows powershell does not work with the activate command. You must open a regular command prompt
 
