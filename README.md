@@ -27,7 +27,7 @@ Once the environment is active, we must install Tensorflow.
 
 **Step 4:** Install tensorflow-gpu as follows:
 ```sh
-> pip install tensorflow-gpu==1.11
+> pip install tensorflow-gpu==1.12
 ```
 
 Once this is installed, check if TensorFlow is properly working.
@@ -58,9 +58,9 @@ It should now say "Using TensorFlow backend".
 
     | Variable | Must contain Value|
     | --- | --- |
-    |CUDA_PATH| C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 |
-    |CUDA_PATH_V9_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0|
-    | Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin |
-    |Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\libnvvp|
+    |CUDA_PATH| C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.2 |
+    |CUDA_PATH_V9_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.2|
+    | Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.2\bin |
+    |Path | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.2\libnvvp|
 4. Make sure a compatible GPU is installed. Not all CUDA capable GPUs are supported by tensorflow. TensorFlow requires a compute compatibility of 3.0 or higher. A list of nVidia GPUs with compute compatibility can be found [here](https://developer.nvidia.com/cuda-gpus/).
 5. If you are using tensorflow-gpu 1.6 or above, make sure your CPU supports AVX (a list of CPUs can be found [here](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions)). If your CPU does not support AVX, use tensorflow-gpu==1.5 in the tensorflow installation line above and it should solve the issue.
